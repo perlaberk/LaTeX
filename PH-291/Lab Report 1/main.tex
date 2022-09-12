@@ -1,0 +1,88 @@
+\NeedsTeXFormat{LaTeX2e}
+
+\documentclass[12pt]{article}
+\usepackage[letterpaper,portrait, margin=1in]{geometry}
+\usepackage{booktabs, pgfplots, bm, multirow, amsmath}
+\pgfplotsset{width=11cm,compat=1.9}
+\renewcommand{\arraystretch}{1.5}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{indentfirst}
+
+
+\begin{document}
+\input{cover.tex}
+\newpage
+\tableofcontents
+\newpage
+\section{Purpose}
+In this lab, various measurement devices are used to find the volume of a cylindrical disc and the density of an aluminum plate. A sample set is taken for each measurement to provide the most precise result given the uncertainty of each measurement device. While some devices might be more precise than others, all physical measurements have an innate degree of physical uncertainty. Calculating the uncertainty of the results allows the experimental data to have meaning. 
+\newpage
+\section{Data}
+\input{tables.tex}
+\newpage
+\section{Calculations}
+\textbf{\!\!\!\!\!\!\!\!\!\! 1. Volume of a cylindrical disc:}\[V_c=\pi\times\left(\frac{d}{2}\right)^2\times h\]
+\begin{center}
+    where \(r\) is the radius of the disc and \(h\) is the thickness of the disc.
+    \[\textnormal{Sample Calculation: }V_c=\pi\times\left(\frac{3.9\textnormal{ cm}}{2}\right)^2\times0.35 \textnormal{ cm}=\boxed{4.18 \textnormal{ cm}^3}\]
+\end{center}
+\textbf{2. Volume of a rectangular object:}\[V_r=l\times w\times h\]
+\begin{center}
+    where \(l\) and \(w\) are the length and width respectively, and \(h\) is the thickness of the object.
+    \[\textnormal{Sample Calculation: }V_r=4.15\textnormal{ cm}\times3.83\textnormal{ cm}\times0.31\textnormal{ cm}=\boxed{4.97 \textnormal{ cm}^3}\]
+\end{center}
+\textbf{3. Computing density:\[\rho=\frac{m}{V}\]}
+\begin{center}
+    where \(m\) and \(V\) are the mass and volume of each object.
+    \[\textnormal{Sample Calculation: }\rho = \frac{10.5\textnormal{ g}}{4.18 \textnormal{ cm}^3}=\boxed{2.51\textnormal{ g}/\textnormal{cm}^3}\]
+\end{center}
+\textbf{4. Sample Mean:}\[\bar{x}=\frac{\sum\limits^{n}_{i=1}{x_i}}{n}\]
+\begin{center}
+    where \(x_i\) represents each value and \(n\) is the total number of entries
+    \[\textnormal{Sample Calculation: }\bar{x}=\frac{\sum\limits^{20}_{i=1}x_i}{20}=\boxed{6.25 \textnormal{ mm}}\]
+\end{center}
+\textbf{5. Sample Standard Deviation:}\[S_x^2=\frac{1}{N_x-1}\sum^{N_x}_{i=1}(x_i-\bar{x})^2 \]
+\begin{center}
+    where \(S_x^2\) is the sample variance and \(S_x\) is the sample standard deviation for each sample set. \(N_x\) is the number of samples in the set. \\
+    \[\textnormal{Sample Calculation: }S_x=\sqrt{\frac{\sum\limits^{20}_{i=1}(x_i-\bar{x})^2}{19}}=\boxed{0.66\textnormal{ mm}}\]
+\end{center}
+\textbf{6. Standard Deviation of the Mean (SDOM):}\[\sigma_x=\frac{S_x}{\sqrt{N_x}}\]
+\begin{center}
+    This also provides us with the random error of each sample set.\\
+    \[\textnormal{Sample Calculation: }\sigma_x=\frac{0.66\textnormal{ mm}}{\sqrt{20}}=\boxed{0.15 \textnormal{ mm}}\]
+\end{center}
+\textbf{7. Test Statistic Value:}
+\[t=\frac{\left|\bar{x}-\bar{y}\right|}{\sqrt{\sigma^2_{\bar{x}}+\sigma^2_{\bar{y}}}}\]
+\[\textnormal{Sample Calculation: }t=\frac{|6.25-5.98|}{\sqrt{0.15^2+0.14^2}}=\boxed{1.32}\]
+\textbf{8. Percent Improvement of Accuracy:}\[\%_{\textnormal{\,Improvement}} = 100-\frac{IE_{\textnormal{\,Vernier Caliper}}}{IE_{\textnormal{\,Linear Scale}}}\times 100 = 100- \frac{0.02}{0.5}\times 100 = \boxed{96\%}\]
+\begin{center}
+    where \textit{IE} refers to the instrumental error of each measurement instrument used.
+\end{center}
+\textbf{9. Error Propagation (Independent Variables):}
+\[\delta f=\sqrt{\left(\frac{\partial f}{\partial x}\delta x\right)^2+\left(\frac{\partial f}{\partial y}\delta y\right)^2+\cdots+\left(\frac{\partial f}{\partial z}\delta z\right)^2}\]
+\begin{center}
+    where the variables $x,\,y,\,z$ are independent and used to determine the value of $f$. $\delta f$ provides the error of the function $f(x,\,y,\dots\,,z)$.
+    \[\textnormal{Sample Calculation for $V_r$: }\delta V_r=\sqrt{\left(0.048\%\right)^2+\left(0.052\%\right)^2+\left(0.16\%)^2\right)}=\boxed{0.175\%} \]
+\end{center}
+\newpage
+\section{Results}
+\input{resulttables.tex}
+\input{histograms.tex}
+\newpage
+\section{Conclusion}
+In the first part of the experiment, the volume of a cylindrical disc was calculated using measurements taken by a linear scale and then by a vernier caliper. The vernier caliper was a more accurate measurement device than the linear scale due to its lower instrumental error. As expected, the overall error in calculating the volume, which included both the instrumental and random error, was reduced relative to the change in instrumental error. The calculated volume using measurements from the linear scale had an average error of 14.8\%, while the measurements from the vernier calipers provided an error of 0.63\%, which shows a 95.8\% decrease in error.
+\par Aluminum alloy 6061 is known to have a density of 2.7 g/cm$^3$, which corresponds to the calculated densities of both the rectangular and cylindrical plates. The density value calculated using measurements from the micrometer was 2.67 $\pm$ 0.01 g/cm$^3$, which is only 1.1\% lower than the known value. The slight difference in calculated densities can be attributed to instrumental error, random error, and imperfections in the plates. The vernier calipers and the micrometer are made of steel, which is significantly harder than aluminum. If the measurement devices were clamped too tightly around the plate, they may eat into the material and provide inaccurate results. 
+\par The final part of the experiment compares the dimensions of acrylic pieces in two separate bottles. The null hypothesis states that the averages lengths of pieces in each bottle will be equal. The histograms for each bottle don't appear to follow a particular distribution. In bottle 10, the average length was 6.25 $\pm$ 0.005 mm. In bottle 17, the average length was 5.98 $\pm$ 0.005 mm. These numbers do not initially appear to be equal, however by using the t-test, a p-value of 40.9\% was obtained which allows us to fail to reject the null-hypothesis.
+\newpage
+\section{Discussion Questions}
+\begin{enumerate}
+    \item Compare the two error values. Did the better instrument produce a corresponding reduction in error value? (For example, if the better instrument had a 20\% less instrumental error, did your final result show a 20\% reduction in error?) If not, why?\\\\
+    The better instrument, being the one with a greater accuracy, produced a correspondingly lower error. For example, when comparing the calculated volumes using the linear scale and the vernier calipers, the error decreased by about 96\%, which is the same as the decrease in instrumental error.\\
+    \item Do the density values agree with one another and the standard value? (Remember, you will have to include the uncertainties when you answer this question).\\\\
+    The standard value of the density of Aluminum alloy 6061 is 2.7 g/cm$^3$. The density calculated using the linear scale measurement of the cylindrical disc was 2.56 $\pm$ 0.4 g/cm$^3$. The density calculated from vernier caliper measurements of the cylindrical disc was 2.66 $\pm$ 0.02 g/cm$^3$. The measurements of the disc with the micrometer provided a density of 2.67$\pm$ 0.01 g/cm$^3$. Finally, the measurements of the rectangular plate provided a density of 2.58 $\pm$ 0.01 g/cm$^3$. These experimental values agree with one another within the error range, but are slightly lower than the standard value.\\
+    \item Comment if your data sets follow a normal distribution (the table in the margin shows what a normal distribution should be like).\\\\
+    The data from bottles 10 and 17 does not follow a normal distribution. Both histograms do not seem to follow any specific distribution pattern, which corresponds to variety of lengths in each bottle.\\
+    \item Using the t value decide if your data supports the null hypotheses at the 5\% significance level.\\\\
+    The expected t value at 5\% significance level with 19 degrees of freedom is 1.729. The calculated value was 1.32. The p-value, which is the difference between the two t-values, is 0.409 (40.9\%) which means that the p-value supports the null hypothesis.
+\end{enumerate}
+\end{document}
