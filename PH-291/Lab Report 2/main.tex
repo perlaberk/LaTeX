@@ -26,6 +26,20 @@ In the second method, the incident and reflected angles of the light are measure
 \input{tables.tex}
 \newpage
 \section{Calculations}
-\[insert here\]
-
+\subsection*{Pfund's Method}
+\noindent \textbf{1. Index of Refraction $\bm{({n_{\textbf{glass}}})}$}\[n_{\textnormal{glass}}=\frac{\sqrt{d^2+16t^2}}{d}\]
+\subsubsection*{Error Propagation:}
+    \noindent\textbf{1.1 Partial Derivative of Eq. 1 w.r.t $\bm d$}\[\frac{\partial n_{\textnormal{glass}}}{\partial d}=-\dfrac{16t^2}{d^2\sqrt{d^2+16t^2}}\]
+    \textbf{1.2 Partial Derivative of Eq. 1 w.r.t $\bm t$} \[\frac{\partial n_{\textnormal{glass}}}{\partial t}=\dfrac{16t}{d\sqrt{16t^2+d^2}}\]
+    \textbf{1.3 Total Error Associated with the Index of Refraction $\bm{({n_{\textbf{glass}}})}$}\[\delta n_{\textnormal{glass}} =\sqrt{\left(\frac{\partial n_{\textnormal{glass}}}{\partial t}\delta t\right)^2+\left(\frac{\partial n_{\textnormal{glass}}}{\partial d}\delta d\right)^2}\]
+\\\textbf{2. Index of Refraction $\bm{({n_{\textbf{liquid}}})}$}\[n_{\textnormal{liquid}}=\frac{n_{\textnormal{glass}}d}{\sqrt{d^2+16t^2}}\]
+\subsubsection*{Error Propagation:}
+    \noindent\textbf{2.1 Partial Derivative of Eq. 2 w.r.t $\bm d$}\[\frac{\partial n_{\textnormal{liquid}}}{\partial d}=\dfrac{16n_\textnormal{glass}t^2}{\left(d^2+16t^2\right)^\frac{3}{2}}\]
+    \textbf{2.2 Partial Derivative of Eq. 2 w.r.t $\bm t$} \[\frac{\partial n_{\textnormal{liquid}}}{\partial t}=-\dfrac{16dn_\text{glass}t}{\left(16t^2+d^2\right)^\frac{3}{2}}\]
+    \textbf{2.3 Partial Derivative of Eq. 2 w.r.t $\bm n_\textbf{glass}$}\[\frac{\partial n_{\textnormal{liquid}}}{\partial n_\text{glass}}=\dfrac{d}{\sqrt{16t^2+d^2}}\]
+    \textbf{2.4 Total Error Associated with the Index of Refraction $\bm{({n_{\textbf{liquid}}})}$}\[\delta n_{\textnormal{liquid}} =\sqrt{\left(\frac{\partial n_{\textnormal{liquid}}}{\partial t}\delta t\right)^2+\left(\frac{\partial n_{\textnormal{liquid}}}{\partial d}\delta d\right)^2+\left(\frac{\partial n_{\textnormal{liquid}}}{\partial n_{\text{glass}}}\delta n_{\text{glass}}\right)^2}\]
+\subsection*{Snell's Law}
+\noindent\textbf{3. The Law of Refraction (Snell's Law)}\[n_1\sin{\theta_1}=n_2\sin{\theta_2}\]
+\subsubsection*{Error Propagation}
+\noindent\textbf{3.1 Partial Derivative of Eq. 3 w.r.t $\bm \theta_1$}
 \end{document}
