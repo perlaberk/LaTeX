@@ -68,7 +68,26 @@ In the second method, the incident and reflected angles of the light are measure
 \newpage
 \section{Results}
 \input{results.tex}
-
 \newpage
 \section{Conclusion}
+Using Pfund's Method, an index of refraction of $1.29\pm0.26$ was calculated. The accepted value of the index of refraction is 1.33, which lies within the error bound of the value calculated via Pfund's Method. However, when directly applying Snell's Law, the index of refraction is found to be $1.62\pm0.03$, which does not match the accepted value. While this method was more precise than Pfund's Method (error of $\pm0.03$ as opposed to $\pm0.26$), the values calculated via Pfund's Method were more accurate (0.04 less than the accepted value). The significant difference between final values can be directly attributed to human error, as described in the previous section. 
+Given that Pfund's Method is an application of Snell's Law, both methods should produce similar results if error can be further reduced.
+\newpage
+\section{Questions}
+\subsection*{1. Derive the equation for $\bm n_\text{glass}$ and include the derivation in your report.}
+    Let $d$ be the diameter of the circle bordering the grey region, $t$ be the thickness of the glass petri dish, and $\theta_c$ be the critical angle. Let us begin with Snell's Law.
+    \[n_1\sin{\theta_1}=n_2\sin{\theta_2}\rightarrow n_{\text{glass}}\sin{\theta_c}=n_{\text{air}}\sin{\frac{\pi}{2}}\]
+    \[n_{\text{glass}}=\frac{n_{\text{air}}}{\sin\theta_c}=\frac{1}{\sin\theta_c}=\frac{\text{Hypotenuse}}{\text{Opposite}}\]
+    \[n_{\text{glass}}=\frac{\sqrt{\left(\frac{d}{4}\right)^2+t^2}}{\frac{d}{4}}=\frac{4\sqrt{\frac{d^2}{16}+t^2}}{d}=\frac{\sqrt{16\left(\frac{d^2}{16}\right)+t^2}}{d}=\frac{\sqrt{d^2+16t^2}}{d}\]
+\subsection*{2. Derive the equation for $\bm n_{\text{liquid}}$ and include the derivation in your report.}
+    Let $d_{\text{liquid}}$ be the diameter of the larger dark ring, $t$ be the thickness of the glass petri dish, and $\theta_c$ be the critical angle. Let us begin with Snell's Law.
+    \[n_{\text{glass}}\sin{\theta_c}=n_{\text{liquid}}\sin{\frac{\pi}{2}}\rightarrow n_{\text{glass}}\sin\theta_c=n_{\text{liquid}}\]
+    \[n_{\text{glass}}\sin{\theta_c}=n_{\text{glass}}\left[\frac{\frac{d_{\text{liquid}}}{4}}{\sqrt{\left(\frac{d_{\text{liquid}}}{4}\right)^2+t^2}}\right]=n_{\text{glass}}\frac{d_{\text{liquid}}}{4\sqrt{\left(\frac{d^2_\text{liquid}}{16}\right)+t^2}}=\frac{n_{\text{glass}}d_{\text{liquid}}}{\sqrt{16\left(\frac{d_{\text{liquid}}^2}{16}\right)+t^2}}\]
+    \[n_{\text{liquid}}=\frac{n_{\text{glass}}d_\text{liquid}}{\sqrt{d^2_{\text{liquid}}+16t^2}}\]
+\subsection*{3. What assumptions or approximations, if any, have been made in the Snell's Law technique? Do you think it/they were reasonable ones? Support your answer quantitatively.}
+    In the Snell's Law technique, multiple assumptions were made. First, the water is assumed to be pure, so that no particles would affect the reflection of light and in turn the index of refraction. Another assumption made is that the pins are placed accurately enough to recreate the angles of incidence and refraction. All instruments, like the protractor, are assumed to be accurate and laid properly on the surface. The laser and protractor are assumed to be laid perfectly flat and have not moved throughout the experiment.
+    Although the value for the index of refraction calculated using this method ($1.62 \pm 0.03$) does not match with the accepted value for the index of refraction (1.33), these assumptions are still considered to be reasonable. Because of the significant human error present in the experiment, in particular in the Snell's Law technique, the approximations associated with the experiment are reasonable.
+\subsection*{4. Will Pfund’s method work for liquids of all $n$? Explain.}
+    Pfund's Method will not work if the index of refraction for the liquid is larger than the index of refraction for the glass. The sine of an angle cannot exceed 1, and such \[\sin\theta_c=\frac{n_{\text{liquid}}}{n_{\text{glass}}}\le 1\]
+    If the value of $n_{\text{glass}}$ is smaller than the value of $n_{\text{liquid}}$, the value of $\sin\theta_c$ would exceed 1, which is impossible. No critical angle ($\theta_c$) could exist, and in turn, there would be no total internal reflection and no rings appearing.
 \end{document}
