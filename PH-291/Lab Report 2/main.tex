@@ -28,13 +28,13 @@ In the second method, the incident and reflected angles of the light are measure
 \section{Calculations}
 \subsection*{Part A: Pfund's Method}
 \noindent \textbf{1. Index of Refraction $\bm{({n_{\textbf{glass}}})}$}\[n_{\textnormal{glass}}=\frac{\sqrt{d^2+16t^2}}{d}\]
-    Before the index of refraction of the liquid $(n_\text{liquid})$ could be found, we must first find the index of refraction of our petri dishes $(n_\text{glass})$. Here, $d$ represents the diameter of the ring of light reflected by the glass and $t$ represents the thickness of the petri dish. When solving for $n_\text{glass}$ mean values of $d$ and $t$ were used. The error of each measurement was propagated through this calculation using the following equations. 
+    Before the index of refraction of the liquid $(n_\text{liquid})$ could be found, we must first find the index of refraction of our petri dishes $(n_\text{glass})$. Here, $d$ represents the diameter of the ring of light reflected by the glass and $t$ represents the thickness of the petri dish. When solving for $n_\text{glass}$ mean values of $d$ and $t$ were used. The error of the mean values were propagated through this calculation using the following equations. 
 \subsubsection*{Error Propagation:}
     \noindent\textbf{1.1 Partial Derivative of Eq. 1 w.r.t $\bm d$}\[\frac{\partial n_{\textnormal{glass}}}{\partial d}=-\dfrac{16t^2}{d^2\sqrt{d^2+16t^2}}\]
     \textbf{1.2 Partial Derivative of Eq. 1 w.r.t $\bm t$} \[\frac{\partial n_{\textnormal{glass}}}{\partial t}=\dfrac{16t}{d\sqrt{16t^2+d^2}}\]
     Each of these partial derivatives are used in the final calculation of the total error associated with $n_\text{glass}.$ Because $d$ and $t$ are both independent variables we use the following equation to find the total error.\\
     \textbf{1.3 Total Error Associated with the Index of Refraction $\bm{({n_{\textbf{glass}}})}$}\[\delta n_{\textnormal{glass}} =\sqrt{\left(\frac{\partial n_{\textnormal{glass}}}{\partial t}\delta t\right)^2+\left(\frac{\partial n_{\textnormal{glass}}}{\partial d}\delta d\right)^2}\]
-    The error associated with each set of measurements was calculated (shown in the results section). The mean of those values provides our final error associated with $(n_\text{glass})$.\\
+    The error associated with the mean values were calculated (shown in Table 5). This provides our final error associated with $(n_\text{glass})$.\\
 \\\textbf{2. Index of Refraction $\bm{({n_{\textbf{liquid}}})}$}\[n_{\textnormal{liquid}}=\frac{n_{\textnormal{glass}}d}{\sqrt{d^2+16t^2}}\]
     We proceed to calculate $(n_\text{liquid})$, which relies on $(n_\text{glass})$ (calculated above), the diameter $d$ of the first ring reflected by the liquid, and the thickness of the petri dish $t$. The total error of $(n_\text{liquid})$ is found using the following equations.
 \subsubsection*{Error Propagation:}
@@ -43,7 +43,7 @@ In the second method, the incident and reflected angles of the light are measure
     \textbf{2.3 Partial Derivative of Eq. 2 w.r.t $\bm n_\textbf{glass}$}\[\frac{\partial n_{\textnormal{liquid}}}{\partial n_\text{glass}}=\dfrac{d}{\sqrt{16t^2+d^2}}\]
     Each of these partial derivatives are used in calculating the total error in the following equation. All of the variables ($(n_\text{glass}), d, \text{and } t$) are independent, which allows us to use the same process as above (Equation 1.3).\\
     \textbf{2.4 Total Error Associated with the Index of Refraction $\bm{({n_{\textbf{liquid}}})}$}\[\delta n_{\textnormal{liquid}} =\sqrt{\left(\frac{\partial n_{\textnormal{liquid}}}{\partial t}\delta t\right)^2+\left(\frac{\partial n_{\textnormal{liquid}}}{\partial d}\delta d\right)^2+\left(\frac{\partial n_{\textnormal{liquid}}}{\partial n_{\text{glass}}}\delta n_{\text{glass}}\right)^2}\]
-    As in Equation 1.3, this equation gives us the total error associated with $(n_\text{liquid})$. The mean of these error values provided us with our final error associated with our mean $(n_\text{liquid})$ value, shown in the results section.
+    As in Equation 1.3, this equation gives us the total error associated with $(n_\text{liquid})$, shown in the results section (Table 6).
 \subsection*{Part B: Snell's Law}
 \noindent\textbf{3. The Law of Refraction (Snell's Law)}\[n_1\sin{\theta_1}=n_2\sin{\theta_2}\Rightarrow n_2=\frac{n_1\sin\theta_1}{\sin\theta_2}\]
     Part B of the experiment requires us to employ the Law of Refraction, also known as Snell's Law, to find the index of refraction of the liquid, which we'll refer to as $n_2$. In this equation, $\theta_1$ refers to the incident angle (the angle at which the light enters the medium) and $\theta_2$ refers to the refracted angle (the angle at which the light exits the medium). The final error associated with $n_2$ is given by the following process. 
@@ -52,8 +52,19 @@ In the second method, the incident and reflected angles of the light are measure
 \textbf{3.2 Partial Derivative of Eq. 3 w.r.t $\bm \theta_2$}\[\frac{\partial n_2}{\partial\theta_2}=-\dfrac{n_1\sin\left({\theta}_1\right)\cos\left({\theta}_2\right)}{\sin^2\left({\theta}_2\right)}\]
     Each of these partial derivatives are used in the following equation to find the total error associated with $n_2$. Because $n_1$ was a given value of the index of refraction of air, there is no error associated with that measurement, so it will not factor into the total error. $\theta_1$ and $\theta_2$ are dependent variables, which allows us to use the following equation to find the total error.\\
 \textbf{3.3 Total Error Associated with the Index of Refraction $\bm{({n_{2}})}$}\[\delta n_2= \left|\left(\frac{\partial n_2}{\partial \theta_1}\delta\theta_1\right)\right|+\left|\left(\frac{\partial n_2}{\partial \theta_2}\delta\theta_2\right)\right|\] 
-    The total error was calculated using this equation for each set of measured angles. The mean of the calculated $n_2$ values alongside the mean error value ($\delta n_2$) provided our final value of the index of refraction of the liquid.
-
+    The total error was calculated using this equation for the measured angles. The mean of the calculated $n_2$ values alongside its error value ($\delta n_2$) provides our final value of the index of refraction of the liquid.\\
+\textbf{4. Sample Mean}\[\bar{x}=\frac{\sum\limits^{n}_{i=1}{x_i}}{n}\]
+    \begin{center}
+        where \(x_i\) represents each value and \(n\) is the total number of entries
+    \end{center}
+\textbf{5. Sample Standard Deviation}\[S_x^2=\frac{1}{N_x-1}\sum^{N_x}_{i=1}(x_i-\bar{x})^2 \]
+    \begin{center}
+        where \(S_x^2\) is the sample variance and \(S_x\) is the sample standard deviation for each sample set. \(N_x\) is the number of samples in the set. \\
+    \end{center}
+\textbf{6. Standard Deviation of the Mean (SDOM)}\[\sigma_x=\frac{S_x}{\sqrt{N_x}}\]
+    \begin{center}
+        This also provides us with the random error of each sample set.\\
+    \end{center}
 \newpage
 \section{Results}
 \input{results.tex}
