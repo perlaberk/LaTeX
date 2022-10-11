@@ -1,0 +1,40 @@
+\NeedsTeXFormat{LaTeX2e}
+
+\documentclass[12pt]{article}
+\usepackage[letterpaper,portrait, margin=1in]{geometry}
+\usepackage{booktabs, pgfplots, bm, multirow, amsmath, wrapfig, gensymb, graphicx}
+\pgfplotsset{width=11cm,compat=1.9}
+\renewcommand{\arraystretch}{1.5}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{indentfirst}
+\usepackage{caption}
+
+
+
+\begin{document}
+\input{Lab 3 Cover Page.tex}
+\newpage
+\section*{Selfie Improvement}
+    \begin{figure}
+    \centering
+    \begin{minipage}{.5\textwidth}
+      \centering
+      \includegraphics[width=\linewidth]{bad selfie.png}
+      \captionof{figure}{First Selfie Taken}
+      \label{fig:test1}
+    \end{minipage}%
+    \begin{minipage}{.5\textwidth}
+      \centering
+      \includegraphics[width=\linewidth]{good selfie.png}
+      \captionof{figure}{Improved Selfie}
+      \label{fig:test2}
+    \end{minipage}
+    \end{figure}
+    When the first selfie was taken, I had positioned myself with the light behind me. This caused the camera to not have enough light on my face to capture a detailed image. In the improved selfie, there was better lighting, which allowed for a better image to be captured.
+\section*{Physical Phenomenon}
+\section*{Alternative Developer Recipe}
+\noindent200 mL Water\\
+1 g Vitamin C\\
+1.2 g Instant Coffee\\
+10 g Washing Soda\\
+\end{document}
