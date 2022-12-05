@@ -17,10 +17,61 @@
 \tableofcontents
 \newpage
 \section{Purpose}
+In this lab, Python is used to plot the single, double, and N-slit interference and diffraction patterns across a range of $\theta$ values.
+The peaks of various wavelengths and slit widths can then be more easily compared.
+The first part has the Young's Double Slit Interference plotted with intensity $(I)$ on the y-axis and $\theta$ on the x-axis. 
+This plot assumes infinitesimally small slit widths, which is changed to provide results that align more with real-world experiments in the final plots.
+A plot for the N-Slit Interference pattern is then plotted with three different values for N. 
+The final two plots use the fixed slit width, with the first plot showing the pattern formed by a single slit 1.5 micrometers wide with both red and blue light.
+The second of these plots shows the pattern formed by a Youngs Double Slit with slits of finite width.
+Each of these plots provides a graphical representation of the derived equations for the interference patterns.
 \newpage
 \section{Results}
+\begin{center}
+\includegraphics*[]{yds.png}\\
+Plot 1: Young's Double Slit Interference\\
+\end{center}
+Plot 1 uses the \verb+np.linspace+ command:
+\begin{verbatim}
+    theta = np.linspace(-np.pi/2.0, np.pi/2.0, 1000)
+\end{verbatim}
+The slit separation here is given to be exactly 1 $\mu m$, and the wavelength used is that of red light (650 $nm$).
+Here, it is assumed that the slits have infinitesimally small width, which is not necessarily true in real life experiments. 
+This is accounted for in Plot 4.
+\begin{center}
+    \includegraphics*[]{ns.png}\\
+    Plot 2: N-Slit Interference\\
+\end{center}
+This plot shows the interference of N-slits. Lines were plotted for 3 different values of N to show the impact of the amount of slits on the interference.
+The equation of the line is \[I=I_0 \left[\frac{\sin N\delta/2}{\sin\delta/2}\right]^2 \quad \delta=\frac{2\pi}{\lambda}d\sin\theta\]
+Here, $I_0=\frac{1}{N^2}$, and $d = 1\: \mu m$. The wavelength ($\lambda$) and \verb+np.linspace+ command are the same as in Plot 1. 
+\begin{center}
+    \includegraphics*[]{ssd.png}\\
+    Plot 3: Single Slit Diffraction\\
+\end{center}
+Plot 3 shows the pattern formed by a slit with $a=1.5\:\mu m$. Each of the lines represents the diffraction due to a red and blue light respectively.
+This curve is then used in the next plot to determine the interference a fixed slit.
+\newpage
+\begin{center}
+    \includegraphics*[]{ydsi.png}\\
+    Plot 4: Young's Double Slit Interference\\ 
+\end{center}
+Plot 4 combines the interference and diffraction to provide the interference of Young's Double Slit for a finite slit width. 
+This red curve is the product of the curve graphed in Plot 1 and the curve plotted in Plot 3.
+The slit width $a$ is 2 times the wavelength, which here was the wavelength of red light. 
+The slit separation here was 3 times the slit width, but this may vary in future plotting. 
 \newpage
 \section{Conclusion}
+Combining the graphs for Young's Double Slit diffraction and interference, a plot for the intensity was created. 
+For the N-slit interference plot, python allows us to see that irrespective of the number of slits, the interference pattern will have the same values of the primary maxima.
+Using python, it becomes easier to understand complex equations using their graphic interpretations. 
+Python allows users to change the values of variables in equations and plot them alongside each other so users may understand how changes impact their final calculated results.
 \newpage
 \section{Question}
+\subsection*{Why is the $\bm{m=3}$ order missing in Plot 4?}
+The $m=3$ peak is missing because it lies at the same point as the minimum of the Single Slit Diffraction curve.
+Generally, missing orders occur when a diffraction minimum occurs at the same value as the interference maximum.
+In our case, this occurs at the $m=3$ order. 
+The other orders displayed on the graph don't have this issue, making $m=3$ the only missing order.
+
 \end{document}
